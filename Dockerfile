@@ -7,7 +7,7 @@ RUN apt-get update &&\
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # The super important one.
-ENV FACTORIO_VERSION 0.12.28
+ENV FACTORIO_VERSION 0.12.29
 
 RUN curl -L -k https://www.factorio.com/get-download/$FACTORIO_VERSION/headless/linux64 | tar -xzf -
 
