@@ -18,4 +18,4 @@ EXPOSE 34197/udp
 EXPOSE 34197/tcp
 
 WORKDIR /factorio/factorio/bin/x64/
-ENTRYPOINT ["/factorio/factorio/bin/x64/factorio", "--start-server", "latest.zip"]
+ENTRYPOINT ["/factorio/factorio/bin/x64/factorio", "--start-server-load-latest"]
