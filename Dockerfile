@@ -7,7 +7,7 @@ RUN apt-get update &&\
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # The super important one.
-ENV FACTORIO_VERSION 0.12.25
+ENV FACTORIO_VERSION 0.13.20
 
 RUN curl -L -k https://www.factorio.com/get-download/$FACTORIO_VERSION/headless/linux64 | tar -xzf -
 
@@ -18,4 +18,4 @@ EXPOSE 34197/udp
 EXPOSE 34197/tcp
 
 WORKDIR /factorio/factorio/bin/x64/
-ENTRYPOINT ["/factorio/factorio/bin/x64/factorio", "--start-server", "latest.zip"]
+ENTRYPOINT ["/factorio/factorio/bin/x64/factorio", "--start-server-load-latest"]
